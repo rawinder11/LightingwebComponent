@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_h__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF
+( ISPICKVAL(Priority__c, &quot;High&quot;),
+IMAGE(&quot;/resource/AccountHealthImages/AccountHealthImages/Red-Error.png&quot;, &quot;Red Flag&quot;,16,16),
+IF
+(ISPICKVAL(Priority__c, &quot;Medium&quot;),
+IMAGE(&quot;/resource/AccountHealthImages/AccountHealthImages/yellow.jpg&quot;,&quot;Yellow Flag&quot;,16,16),
+IF
+(ISPICKVAL(Priority__c, &quot;Low&quot;),
+IMAGE(&quot;/resource/AccountHealthImages/AccountHealthImages/Green.png&quot;,&quot;Green Flag&quot;,16,16),&quot;&quot;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Account h</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
